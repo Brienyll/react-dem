@@ -33,3 +33,25 @@ const exArray = array.forEach(user => {
   let {username} = user;
   newArray.push(`${username}!`);
 });
+
+//Create an array using map that has all the usernames with a "?" at the end of usernames
+const qArray = array.map(user => {
+  let {username} = user;
+  return `${username}?`;
+});
+
+console.log(qArray);
+
+//Filter the array to only include users who are on team: red
+const redArray = array.filter(user => {
+  return user.team === 'red';
+});
+
+console.log(redArray);
+
+//Find out the total score of all users using reduce
+const totalScores = array.reduce((acc, tscore) => {
+  return acc + tscore.score;
+}, 0);
+
+console.log(totalScores);
