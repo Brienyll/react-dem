@@ -33,3 +33,9 @@ Object.entries(obj).forEach(value => {
 [ 'user1', 'Rudolph' ]
 [ 'user2', 'Grinch' ]
 */
+
+Object.entries(obj).map(value => {
+  return value[1] + value[0].replace('user', '')
+})
+
+//[ 'Santa0', 'Rudolph1', 'Grinch2' ]
